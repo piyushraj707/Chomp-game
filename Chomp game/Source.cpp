@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -36,9 +37,21 @@ int main() {
 		}
 		cout<< players[player_number] << "'s chance" << endl;
 		//printing the cookies, 1: cookie, 0: no cookie;
+		int column_width = 1;
+		int rows_width = 3;
+		if (columns > 9) column_width = 2;
+		if (rows > 9) rows_width = 4;
+		cout << setw(rows_width)<<" ";
+		int i = 0;
+		while (i<columns) {
+			cout << setw(column_width) << left << i + 1 << " ";
+			i++;
+		}
+		cout << endl << endl;
 		for (int i = 0; i < rows; i++) {
+			cout << setw(rows_width) << left << i + 1;
 			for (int j = 0; j < columns; j++) {
-				cout << board[i][j] << " ";
+				cout << setw(column_width) << left << board[i][j] << " ";
 			}
 			cout << endl;
 		}
