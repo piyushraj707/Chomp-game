@@ -7,7 +7,7 @@ int main() {
 	cout << "Enter number of rows: "; cin >> rows;
 	cout << "Enter number of columns: "; cin >> columns;
 
-	char player1[] = ""; char player2[] = "";
+	char player1[] = "               "; char player2[] = "                   ";
 	cout << "Enter player 1's name: "; cin >> player1;
 	cout << "Enter player 2's name: "; cin >> player2;
 	char* players[2] = { player1,player2 };
